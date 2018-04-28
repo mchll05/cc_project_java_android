@@ -1,4 +1,4 @@
-package com.example.maustin.challengeme.javajava;
+package com.example.maustin.challengeme;
 
 import java.io.Serializable;
 
