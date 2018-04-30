@@ -1,13 +1,12 @@
 package com.example.maustin.challengeme;
 
 import android.support.v7.app.AppCompatActivity;
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
+
+import com.example.maustin.challengeme.tasksandlists.Task;
+import com.example.maustin.challengeme.tasksandlists.TaskList;
+import com.example.maustin.challengeme.tasksandlists.TaskListAdapter;
 
 import java.util.ArrayList;
 

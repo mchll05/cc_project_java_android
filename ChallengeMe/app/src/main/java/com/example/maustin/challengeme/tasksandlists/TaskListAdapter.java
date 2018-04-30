@@ -1,4 +1,4 @@
-package com.example.maustin.challengeme;
+package com.example.maustin.challengeme.tasksandlists;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,6 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+
+import com.example.maustin.challengeme.R;
+import com.example.maustin.challengeme.tasksandlists.Task;
 
 import java.util.ArrayList;
 
