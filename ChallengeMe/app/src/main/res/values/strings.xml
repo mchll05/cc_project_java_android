@@ -2,4 +2,6 @@
     <string name="app_name">ChallengeMe</string>
     <string name="exerciseButton">Go to Challenges</string>
     <string name="photographyButton">Go to Challenges</string>
+    <string name="say_user_profile">User Profile</string>
+    <string name="menu_toast_hello">Hello</string>
 </resources>
