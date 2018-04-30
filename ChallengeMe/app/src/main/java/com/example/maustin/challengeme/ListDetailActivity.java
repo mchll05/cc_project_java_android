@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -21,5 +22,6 @@ public class ListDetailActivity extends AppCompatActivity {
 
     ListView listView = (ListView) findViewById(R.id.list_item);
     listView.setAdapter(taskListAdapter);
+
     }
 }
