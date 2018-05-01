@@ -10,12 +10,12 @@ import com.example.maustin.challengeme.tasksandlists.TaskListAdapter;
 
 import java.util.ArrayList;
 
-public class ListDetailActivity extends AppCompatActivity {
+public class TaskActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_detail);
+        setContentView(R.layout.task_layout);
 
     final TaskList taskList = new TaskList();
     ArrayList<Task> list = taskList.getList();
@@ -31,7 +31,7 @@ public class ListDetailActivity extends AppCompatActivity {
 //        @Override
 //            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
 //
-//            Toast.makeText(ListDetailActivity.this, position, Toast.LENGTH_LONG).show();
+//            Toast.makeText(TaskActivity.this, position, Toast.LENGTH_LONG).show();
 //                return true;
 //            }
 //        });

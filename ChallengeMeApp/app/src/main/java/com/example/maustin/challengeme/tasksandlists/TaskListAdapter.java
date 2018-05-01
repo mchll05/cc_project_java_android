@@ -8,7 +8,6 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.example.maustin.challengeme.R;
-import com.example.maustin.challengeme.tasksandlists.Task;
 
 import java.util.ArrayList;
 
@@ -23,7 +22,7 @@ public class TaskListAdapter extends ArrayAdapter{
     public View getView(int position, View listItemView, ViewGroup parent){
 
         if (listItemView == null) {
-            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
+            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.task_item, parent, false);
         }
 
             Task currentTask = (Task) getItem(position);

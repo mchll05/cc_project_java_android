@@ -4,21 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListDetailActivity"
+    tools:context=".TaskActivity"
  >
 
     <ListView
         android:id="@+id/taskListId"
         android:layout_width="match_parent"
-        android:layout_height="514dp"
+        android:layout_height="0dip"
         android:layout_gravity="center_horizontal"
         android:layout_weight="1"
         android:dividerHeight="12.0dp"
-        tools:divider="@color/ic_launcher_background"
-        tools:layout_editor_absoluteY="-3dp" />
+        tools:divider="@color/ic_launcher_background" />
 
 
-    <!--android:layout_width="wrap_content"-->
+
+
+
+
+
+        <!--android:layout_width="wrap_content"-->
         <!--android:layout_height="wrap_content"-->
     <!--/>-->
 </android.support.constraint.ConstraintLayout>

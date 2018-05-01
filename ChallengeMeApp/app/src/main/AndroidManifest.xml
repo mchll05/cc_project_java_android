@@ -16,8 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CategoryDetailActivity" />
-        <activity android:name=".ListDetailActivity"></activity>
+        <activity android:name=".ChallengeActivity" />
+        <activity android:name=".TaskActivity"></activity>
 
         <meta-data
             android:name="preloaded_fonts"

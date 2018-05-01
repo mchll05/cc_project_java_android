@@ -12,10 +12,9 @@ import android.widget.TextView;
 
 import com.example.maustin.challengeme.challengeandlists.ChallengeAdapter;
 import com.example.maustin.challengeme.challengeandlists.ChallengeList;
-import com.example.maustin.challengeme.tasksandlists.TaskListAdapter;
 
 
-public class CategoryDetailActivity extends AppCompatActivity {
+public class ChallengeActivity extends AppCompatActivity {
 
     CardView cardView;
     Button yogaButton;
@@ -24,7 +23,7 @@ public class CategoryDetailActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.challenge_list);
+        setContentView(R.layout.challenge_layout);
 
         cardView = findViewById(R.id.cardViewId);
         yogaButton = findViewById(R.id.challengeBId);
@@ -40,7 +39,7 @@ public class CategoryDetailActivity extends AppCompatActivity {
 
     public void onChallengeButtonClicked(View button){
         Log.d("fdgd", "onChallengeButtonClicked was called");
-        Intent intent = new Intent(this, ListDetailActivity.class );
+        Intent intent = new Intent(this, TaskActivity.class );
         startActivity(intent);
     }
 }
