@@ -12,6 +12,8 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.maustin.challengeme.challengeandlists.Categories;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,19 +22,32 @@ public class MainActivity extends AppCompatActivity {
     TextView title;
     CardView cardView;
 
+    Categories categories;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        categories = new Categories();
+
         exerciseButton = findViewById(R.id.firstImageBId);
         photographyButton = findViewById(R.id.secondImageBId);
+
         cardView = findViewById(R.id.cardViewId);
     }
 
     public void onCategoryButtonClicked(View button) {
         Intent intent = new Intent(this, ChallengeActivity.class);
-        startActivity(intent);
+
+        if (button == exerciseButton) {
+            intent.putExtra("category", categories.getCategory("exercise"));
+            startActivity(intent);
+        } else if (button == photographyButton) {
+            intent.putExtra("category", categories.getCategory("photography"));
+            startActivity(intent);
+        }
+
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {

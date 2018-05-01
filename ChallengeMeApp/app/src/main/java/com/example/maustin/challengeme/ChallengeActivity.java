@@ -4,21 +4,22 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.maustin.challengeme.challengeandlists.Category;
+import com.example.maustin.challengeme.challengeandlists.Challenge;
 import com.example.maustin.challengeme.challengeandlists.ChallengeAdapter;
-import com.example.maustin.challengeme.challengeandlists.ChallengeList;
 
 
 public class ChallengeActivity extends AppCompatActivity {
 
     CardView cardView;
-    Button yogaButton;
+    Button goButton;
     TextView title;
+    Category category;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,20 +27,28 @@ public class ChallengeActivity extends AppCompatActivity {
         setContentView(R.layout.challenge_layout);
 
         cardView = findViewById(R.id.cardViewId);
-        yogaButton = findViewById(R.id.challengeBId);
+        goButton = findViewById(R.id.challengeBId);
 
-        ChallengeList challengeList = new ChallengeList();
-        ChallengeAdapter challengeAdapter = new ChallengeAdapter(this, challengeList.getCard());
+        Intent intent = getIntent();
+        Bundle extras = intent.getExtras();
+        category = (Category) extras.getSerializable("category");
 
-        ListView listView = (ListView) findViewById(R.id.challengeListID);
-        listView.setAdapter(challengeAdapter);
+            ChallengeAdapter challengeAdapter = new ChallengeAdapter(this, category.getChallenges());
+
+            ListView listView = (ListView) findViewById(R.id.challengeListID);
+            listView.setAdapter(challengeAdapter);
 
 
     }
 
-    public void onChallengeButtonClicked(View button){
-        Log.d("fdgd", "onChallengeButtonClicked was called");
-        Intent intent = new Intent(this, TaskActivity.class );
+    public void onChallengeButtonClicked(View button) {
+        Intent intent = new Intent(this, TaskActivity.class);
+
+        Challenge tappedChallange = (Challenge) button.getTag();
+        intent.putExtra("challenge", tappedChallange);
         startActivity(intent);
+
     }
 }
+
+

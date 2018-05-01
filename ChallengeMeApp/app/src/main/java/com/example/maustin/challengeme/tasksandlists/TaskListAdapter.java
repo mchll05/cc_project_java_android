@@ -30,6 +30,7 @@ public class TaskListAdapter extends ArrayAdapter{
             TextView number = (TextView) listItemView.findViewById(R.id.stepViewId);
             number.setText(currentTask.getNumber().toString());
 
+        listItemView.setTag(currentTask);
 
         TextView taskDescription = (TextView) listItemView.findViewById(R.id.taskViewId);
         taskDescription.setText(currentTask.getTask().toString());

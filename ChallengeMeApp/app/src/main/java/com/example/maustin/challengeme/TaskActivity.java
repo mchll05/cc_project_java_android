@@ -1,39 +1,31 @@
 package com.example.maustin.challengeme;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 
-import com.example.maustin.challengeme.tasksandlists.Task;
-import com.example.maustin.challengeme.tasksandlists.TaskList;
+import com.example.maustin.challengeme.challengeandlists.Challenge;
 import com.example.maustin.challengeme.tasksandlists.TaskListAdapter;
 
-import java.util.ArrayList;
-
 public class TaskActivity extends AppCompatActivity {
+
+    Challenge challenge;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.task_layout);
 
-    final TaskList taskList = new TaskList();
-    ArrayList<Task> list = taskList.getList();
+        Intent intent = getIntent();
+        Bundle extras = intent.getExtras();
+        challenge = (Challenge) extras.getSerializable("challenge");
+
+        TaskListAdapter taskListAdapter = new TaskListAdapter(this, challenge.getTaskList());
+
+        ListView listView = (ListView) findViewById(R.id.taskListId);
+        listView.setAdapter(taskListAdapter);
 
 
-    TaskListAdapter taskListAdapter = new TaskListAdapter(this, list);
-
-    ListView listView = (ListView) findViewById(R.id.taskListId);
-    listView.setAdapter(taskListAdapter);
-
-//    listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-
-//        @Override
-//            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-//
-//            Toast.makeText(TaskActivity.this, position, Toast.LENGTH_LONG).show();
-//                return true;
-//            }
-//        });
     }
 }
