@@ -37,8 +37,6 @@ public class ChallengeActivity extends AppCompatActivity {
 
             ListView listView = (ListView) findViewById(R.id.challengeListID);
             listView.setAdapter(challengeAdapter);
-
-
     }
 
     public void onChallengeButtonClicked(View button) {
@@ -47,7 +45,6 @@ public class ChallengeActivity extends AppCompatActivity {
         Challenge tappedChallange = (Challenge) button.getTag();
         intent.putExtra("challenge", tappedChallange);
         startActivity(intent);
-
     }
 }
 

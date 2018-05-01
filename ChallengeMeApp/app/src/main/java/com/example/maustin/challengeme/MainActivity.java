@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,9 +20,9 @@ public class MainActivity extends AppCompatActivity {
 
     ImageButton exerciseButton;
     ImageButton photographyButton;
+    Button myButton;
     TextView title;
     CardView cardView;
-
     Categories categories;
 
     @Override
@@ -29,12 +30,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        categories = new Categories();
+        //******************************************************************************************
 
+        //******************************************************************************************
+
+        categories = new Categories();
         exerciseButton = findViewById(R.id.firstImageBId);
         photographyButton = findViewById(R.id.secondImageBId);
-
+        myButton = findViewById(R.id.myChallengesB);
         cardView = findViewById(R.id.cardViewId);
+
     }
 
     public void onCategoryButtonClicked(View button) {
@@ -47,8 +52,17 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra("category", categories.getCategory("photography"));
             startActivity(intent);
         }
-
     }
+
+    //------------------------user saved challenges button----------------------------
+
+    public void onMyChallengesButtonClick(View button) {
+
+        Intent intent = new Intent(this, MyChallengesActivity.class);
+        startActivity(intent);
+    }
+
+    //+++++++++++++++++++++++++++++++++Menu++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();

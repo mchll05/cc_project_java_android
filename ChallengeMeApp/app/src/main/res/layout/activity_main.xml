@@ -8,6 +8,7 @@
     tools:actionBarNavMode="#000000"
     tools:context=".MainActivity">
 
+
     <ImageButton
         android:id="@+id/firstImageBId"
         android:layout_width="160dp"
@@ -84,8 +85,9 @@
 
     <TextView
         android:id="@+id/headerMainId"
-        android:layout_width="263dp"
-        android:layout_height="168dp"
+        android:layout_width="166dp"
+        android:layout_height="137dp"
+        android:layout_marginBottom="80dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
@@ -99,9 +101,32 @@
         android:textColor="@android:color/black"
         android:textSize="36sp"
         android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/firstImageBId"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/myChallengesB"
+        android:layout_width="102dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/sunblend"
+        android:fontFamily="@font/advent_pro_semibold"
+        android:onClick="onMyChallengesButtonClick"
+        android:text="My Challenges"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.044" />
 
 </android.support.constraint.ConstraintLayout>

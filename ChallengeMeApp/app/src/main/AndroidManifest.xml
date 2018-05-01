@@ -17,11 +17,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".ChallengeActivity" />
-        <activity android:name=".TaskActivity"></activity>
+        <activity android:name=".TaskActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <activity android:name=".MyChallengesActivity"></activity>
     </application>
 
 </manifest>
