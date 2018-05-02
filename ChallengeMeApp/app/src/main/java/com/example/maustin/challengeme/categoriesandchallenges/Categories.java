@@ -1,6 +1,6 @@
-package com.example.maustin.challengeme.challengeandlists;
+package com.example.maustin.challengeme.categoriesandchallenges;
 
-import com.example.maustin.challengeme.tasksandlists.Task;
+import com.example.maustin.challengeme.tasks.Task;
 
 import java.io.Serializable;
 import java.util.ArrayList;

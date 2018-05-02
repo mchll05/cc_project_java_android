@@ -13,7 +13,8 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.maustin.challengeme.challengeandlists.Categories;
+import com.example.maustin.challengeme.categoriesandchallenges.Categories;
+import com.example.maustin.challengeme.categoriesandchallenges.Challenge;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -29,10 +30,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        //******************************************************************************************
-
-        //******************************************************************************************
 
         categories = new Categories();
         exerciseButton = findViewById(R.id.firstImageBId);
@@ -57,8 +54,9 @@ public class MainActivity extends AppCompatActivity {
     //------------------------user saved challenges button----------------------------
 
     public void onMyChallengesButtonClick(View button) {
-
+        Challenge challenge = (Challenge) button.getTag();
         Intent intent = new Intent(this, MyChallengesActivity.class);
+        intent.putExtra("challenge", challenge);
         startActivity(intent);
     }
 

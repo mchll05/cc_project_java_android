@@ -5,8 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 
-import com.example.maustin.challengeme.challengeandlists.Challenge;
-import com.example.maustin.challengeme.tasksandlists.TaskListAdapter;
+import com.example.maustin.challengeme.categoriesandchallenges.Challenge;
+import com.example.maustin.challengeme.tasks.TaskListAdapter;
 
 public class TaskActivity extends AppCompatActivity {
 

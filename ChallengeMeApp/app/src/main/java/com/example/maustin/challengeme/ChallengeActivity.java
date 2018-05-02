@@ -9,9 +9,9 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.maustin.challengeme.challengeandlists.Category;
-import com.example.maustin.challengeme.challengeandlists.Challenge;
-import com.example.maustin.challengeme.challengeandlists.ChallengeAdapter;
+import com.example.maustin.challengeme.categoriesandchallenges.Category;
+import com.example.maustin.challengeme.categoriesandchallenges.Challenge;
+import com.example.maustin.challengeme.categoriesandchallenges.ChallengeAdapter;
 
 
 public class ChallengeActivity extends AppCompatActivity {

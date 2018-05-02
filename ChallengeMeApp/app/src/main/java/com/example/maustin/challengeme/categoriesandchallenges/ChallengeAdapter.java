@@ -1,4 +1,4 @@
-package com.example.maustin.challengeme.challengeandlists;
+package com.example.maustin.challengeme.categoriesandchallenges;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 import com.example.maustin.challengeme.R;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 
 public class ChallengeAdapter extends ArrayAdapter {

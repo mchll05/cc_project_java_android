@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/challengeItem"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/dandbackground"
@@ -58,4 +59,14 @@
         app:layout_constraintStart_toStartOf="@+id/cardViewId"
         app:layout_constraintTop_toTopOf="@+id/cardViewId"
         app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/toMyChallengesB"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:text="Add to My Challenges"
+        android:textSize="8sp"
+        android:textStyle="italic"
+        tools:layout_editor_absoluteX="217dp"
+        tools:layout_editor_absoluteY="211dp" />
 </android.support.constraint.ConstraintLayout>
