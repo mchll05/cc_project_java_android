@@ -26,10 +26,7 @@ public class MyChallengesActivity extends AppCompatActivity {
         Intent intent = getIntent();
         Challenge challengeToAddToCollection = (Challenge) intent.getSerializableExtra("challenge");
 
-
         ApplicationState applicationState = SharedPreferencesHelper.loadApplicationState(this);
-
-//        applicationState.getCategories().add(challengeToAddToCollection);
 
         SharedPreferencesHelper.saveApplicationState(this, applicationState);
 
@@ -37,19 +34,9 @@ public class MyChallengesActivity extends AppCompatActivity {
 
         ListView challengeNamesListView = (ListView) findViewById(R.id.currentChallenges);
         challengeNamesListView.setAdapter(challengeNamesArrayAdapter);
+
+//        ListView completeChallengeListView = (ListView) findViewById(R.id.completedChallenges);
+//        completeChallengeListView.setAdapter(challengeNamesArrayAdapter);
     }
 }
 
-
-
-//        SharedPreferences sharedPref = getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
-//        String myChallenges = sharedPref.getString("MyChallenges", "{}");
-//
-//        Intent intent = getIntent();
-//        Challenge challengeToAddToCollection = (Challenge) intent.getSerializableExtra("challenge");
-//
-//        ApplicationState applicationState = SharedPreferencesHelper.loadApplicationState(this);
-//        applicationState.getMyChallenges().add(challengeToAddToCollection);
-//        SharedPreferencesHelper.saveApplicationState(this, applicationState);
-//    }
-//}

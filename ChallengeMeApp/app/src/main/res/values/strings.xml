@@ -4,6 +4,6 @@
     <string name="photographyButton">Go to Challenges</string>
     <string name="say_user_profile">User Profile</string>
     <string name="menu_toast_hello">Hello</string>
-    <string name ="preference_file_key">My Challenges Page</string>
+    <string name="preference_file_key">My Challenges Page</string>
 
 </resources>
