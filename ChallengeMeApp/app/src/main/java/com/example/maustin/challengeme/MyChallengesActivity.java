@@ -5,7 +5,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -18,18 +20,20 @@ import java.util.ArrayList;
 
 public class MyChallengesActivity extends AppCompatActivity {
 
+    Button createButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_challenges);
 
+        createButton = findViewById(R.id.createChallengeB);
+
         Intent intent = getIntent();
         Challenge challengeToAddToCollection = (Challenge) intent.getSerializableExtra("challenge");
 
         ApplicationState applicationState = SharedPreferencesHelper.loadApplicationState(this);
-
         SharedPreferencesHelper.saveApplicationState(this, applicationState);
-
         ChallengeAdapter challengeNamesArrayAdapter = new ChallengeAdapter(this, applicationState.getCategories().getMyChallengesFromAllCategories());
 
         ListView challengeNamesListView = (ListView) findViewById(R.id.currentChallenges);
@@ -37,6 +41,11 @@ public class MyChallengesActivity extends AppCompatActivity {
 
 //        ListView completeChallengeListView = (ListView) findViewById(R.id.completedChallenges);
 //        completeChallengeListView.setAdapter(challengeNamesArrayAdapter);
+    }
+
+    public void onCreateNewChallengeButtonClick(View button) {
+        Intent intent = new Intent(this, UserCreatesActivity.class);
+        startActivity(intent);
     }
 }
 
