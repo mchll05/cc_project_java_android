@@ -13,7 +13,7 @@
     <android.support.v7.widget.CardView
         android:id="@+id/cardViewId"
         android:layout_width="280dp"
-        android:layout_height="200dp"
+        android:layout_height="165dp"
         android:layout_gravity="center"
         android:layout_marginBottom="100dp"
         android:layout_marginEnd="8dp"
@@ -31,10 +31,11 @@
 
         <TextView
             android:id="@+id/nameID"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="186dp"
+            android:layout_height="70dp"
             android:fontFamily="cursive"
-            android:textSize="24sp"
+            android:gravity="center"
+            android:textSize="30sp"
             android:textStyle="bold|italic"
             tools:background="@android:color/holo_blue_light" />
 
@@ -62,11 +63,50 @@
 
     <Button
         android:id="@+id/toMyChallengesB"
-        android:layout_width="wrap_content"
-        android:layout_height="42dp"
-        android:text="Add to My Challenges"
+        android:layout_width="87dp"
+        android:layout_height="31dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="4dp"
+        android:background="#9ed8ed"
+        android:fontFamily="@font/vast_shadow"
+        android:onClick="onAddToMyChallengesButtonClicked"
+        android:text="Add Challenge"
         android:textSize="8sp"
         android:textStyle="italic"
-        tools:layout_editor_absoluteX="217dp"
-        tools:layout_editor_absoluteY="211dp" />
+        app:layout_constraintEnd_toEndOf="@+id/cardViewId"
+        app:layout_constraintTop_toTopOf="@+id/cardViewId" />
+
+    <Button
+        android:id="@+id/fromMyChallengesB"
+        android:layout_width="87dp"
+        android:layout_height="31dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="4dp"
+        android:background="#9ed8ed"
+        android:fontFamily="@font/vampiro_one"
+        android:onClick="onRemoveFromMyChallengesButtonClicked"
+        android:text="Remove Challenge"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toEndOf="@+id/cardViewId"
+        app:layout_constraintTop_toBottomOf="@+id/toMyChallengesB" />
+
+    <TextView
+        android:id="@+id/descriptionID"
+        android:layout_width="264dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/advent_pro_semibold"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/cardViewId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.423"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 </android.support.constraint.ConstraintLayout>

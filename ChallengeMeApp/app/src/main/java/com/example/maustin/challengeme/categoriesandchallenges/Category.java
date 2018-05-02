@@ -19,4 +19,16 @@ public class Category implements Serializable {
     public ArrayList<Challenge> getChallenges() {
         return challenges;
     }
+
+//    public ArrayList<Challenge> getCurrentChallenge(){
+//        ArrayList<Challenge> result = new ArrayList<Challenge>();
+//
+//        for (Challenge challenge : challenges) {
+//
+//            if (challenge.equals(name)){
+//                result.add(challenge);
+//            }
+//        }
+//        return result;
+//    }
 }

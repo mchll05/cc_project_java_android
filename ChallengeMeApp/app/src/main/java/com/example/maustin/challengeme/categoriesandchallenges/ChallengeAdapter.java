@@ -31,11 +31,17 @@ public class ChallengeAdapter extends ArrayAdapter {
         TextView name = (TextView) cardItemView.findViewById(R.id.nameID);
         name.setText(currentChallenge.getName());
 
+        TextView description = (TextView) cardItemView.findViewById(R.id.descriptionID);
+        description.setText(currentChallenge.getChallengeDescription());
+
         Button goButton = (Button) cardItemView.findViewById(R.id.challengeBId);
         goButton.setTag(currentChallenge);
 
-//        TextView taskDescription = (TextView) cardItemView.findViewById(R.id.cardID);
-//        challengeDescription.setText(currentChallenge.getChallengeDescription());
+        Button addToMyChallengeButton = (Button) cardItemView.findViewById(R.id.toMyChallengesB);
+        addToMyChallengeButton.setTag(currentChallenge);
+
+        Button removeFromToMyChallengeButton = (Button) cardItemView.findViewById(R.id.fromMyChallengesB);
+        removeFromToMyChallengeButton.setTag(currentChallenge);
 
         return cardItemView;
     }

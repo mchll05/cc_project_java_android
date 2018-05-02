@@ -1,24 +1,19 @@
 package com.example.maustin.challengeme.sharedpref;
 
+import com.example.maustin.challengeme.categoriesandchallenges.Categories;
 import com.example.maustin.challengeme.categoriesandchallenges.Challenge;
 
 import java.util.ArrayList;
 
 public class ApplicationState {
 
-    private ArrayList<Challenge> myChallenges;
-    private String userName;
+    private Categories categories;
 
-    public ApplicationState(String userName){
-        this.userName = userName;
-        this.myChallenges = new ArrayList<Challenge>();
+    public Categories getCategories() {
+        return categories;
     }
 
-    public ArrayList<Challenge> getMyChallenges() {
-        return myChallenges;
-    }
-
-    public void setMyChallenges(ArrayList<Challenge> myChallenges) {
-        this.myChallenges = myChallenges;
+    public ApplicationState(Categories categories){
+        this.categories = categories;
     }
 }

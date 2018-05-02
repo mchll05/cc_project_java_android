@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    //------------------------user saved challenges button----------------------------
+    //------------------------Saved Challenges Button----------------------------
 
     public void onMyChallengesButtonClick(View button) {
         Challenge challenge = (Challenge) button.getTag();

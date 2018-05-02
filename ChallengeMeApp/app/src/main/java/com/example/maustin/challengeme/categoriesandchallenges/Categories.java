@@ -7,9 +7,11 @@ import java.util.ArrayList;
 
 public class Categories implements Serializable{
     ArrayList<Category> allCategories;
+    ArrayList<Challenge> myChallenges;
 
     public Categories() {
         this.allCategories = seedEverything();
+        this.myChallenges = new ArrayList<>();
     }
 
     public Category getCategory(String name){
@@ -20,6 +22,16 @@ public class Categories implements Serializable{
             }
         }
         return allCategories.get(0); // if not found return the first one
+    }
+
+    public ArrayList<Challenge> getMyChallengesFromAllCategories() {
+//        ArrayList<Challenge> result = new ArrayList<Challenge>();
+//        for (Category category:allCategories) {
+//            for(Challenge challenge:category.getChallenges()) {
+//                result.add(challenge);
+//            }
+//        }
+        return this.myChallenges;
     }
 
     private ArrayList<Category> seedEverything(){
@@ -46,8 +58,8 @@ public class Categories implements Serializable{
 
 
         ArrayList<Challenge> exerciseChallenges = new ArrayList<Challenge>();
-        exerciseChallenges.add(new Challenge("Yoga Challenge", "This is the first challenge", yogaTaskList));
-        exerciseChallenges.add(new Challenge("Ab Challenge", "This is the second challenge", yogaTaskList));
+        exerciseChallenges.add(new Challenge("Yoga Flex", "This is the first challenge", yogaTaskList));
+        exerciseChallenges.add(new Challenge("AB-solutely Fabulous", "This is the second challenge", yogaTaskList));
 //        exerciseChallenges.add(new Challenge("Push up Challenge", "This is the third challenge", yogaTaskList));
 //        exerciseChallenges.add(new Challenge("0 to 5K", "This is the fourth challenge", yogaTaskList));
 //        exerciseChallenges.add(new Challenge("Vogue Challenge", "This is the fifth challenge", yogaTaskList));
