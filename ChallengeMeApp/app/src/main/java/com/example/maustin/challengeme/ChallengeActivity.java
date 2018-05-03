@@ -69,7 +69,9 @@ public class ChallengeActivity extends AppCompatActivity {
             categories = new Categories();
         }
         // make change:
-        categories.getActiveFromAllCategories().add(tappedChallenge);
+
+        categories.setChallengeAsActive(tappedChallenge);
+
 //         save state:
         SharedPreferencesHelper.saveApplicationState(this, new ApplicationState(categories));
     }

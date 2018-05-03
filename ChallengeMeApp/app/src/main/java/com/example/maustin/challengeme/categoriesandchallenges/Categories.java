@@ -40,7 +40,7 @@ public class Categories implements Serializable {
         for (Category category : allCategories) {
             for (Challenge challenge : category.getChallenges()) {
                 if(challenge.getName().equals(challengeToBeSetActive.getName())) {
-                    challenge.setCompleted(true);
+                    challenge.setActive(true);
                 }
             }
         }
