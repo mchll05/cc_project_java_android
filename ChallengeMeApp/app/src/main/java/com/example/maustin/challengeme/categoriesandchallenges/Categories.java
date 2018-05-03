@@ -5,19 +5,19 @@ import com.example.maustin.challengeme.tasks.Task;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Categories implements Serializable{
+public class Categories implements Serializable {
     ArrayList<Category> allCategories;
-    ArrayList<Challenge> myChallenges;
+    ArrayList<Challenge> myChallenges;//
 
     public Categories() {
         this.allCategories = seedEverything();
         this.myChallenges = new ArrayList<>();
     }
 
-    public Category getCategory(String name){
+    public Category getCategory(String name) {
 
-        for (Category c : allCategories){
-            if (c.getName().equals(name)){
+        for (Category c : allCategories) {
+            if (c.getName().equals(name)) {
                 return c;
             }
         }
@@ -25,18 +25,45 @@ public class Categories implements Serializable{
     }
 
     public ArrayList<Challenge> getMyChallengesFromAllCategories() {
-//        ArrayList<Challenge> result = new ArrayList<Challenge>();
-//        for (Category category:allCategories) {
-//            for(Challenge challenge:category.getChallenges()) {
-//                result.add(challenge);
-//            }
-//        }
         return this.myChallenges;
     }
 
-    private ArrayList<Category> seedEverything(){
+    public ArrayList<Challenge> getAllCompletedChallenges() {
+        ArrayList<Challenge> completedChallenges = new ArrayList<Challenge>();
+        for (Category category : allCategories) {
+            for (Challenge challenge : category.getChallenges()) {
+                //if challenge is complete, add to completed challenge ArrayList
+                if (challenge.isCompleted()) {
+                    completedChallenges.add(challenge);
+                }
+            }
+        }
+        return completedChallenges;
+    }
 
-        ArrayList<Task>  yogaTaskList = new ArrayList<Task>();
+    public void setChallengeAsCompleted(Challenge challengeToBeSetComplete) {
+        //loop through categories to find category
+        for (Category category : allCategories) {
+            //loop through challenges to find challenge
+            for(Challenge challenge : category.getChallenges()) {
+                //if challenge is equal to challengeToBeSetCompleted
+                if(challenge.getName().equals(challengeToBeSetComplete.getName())) {
+                    //set challenge as true
+                    challenge.setCompleted(true);
+                }
+            }
+        }
+
+
+
+
+
+
+    }
+
+    private ArrayList<Category> seedEverything() {
+
+        ArrayList<Task> yogaTaskList = new ArrayList<Task>();
         yogaTaskList.add(new Task(1, "Sun Salutation flow for 10 minutes", false));
         yogaTaskList.add(new Task(2, "Hold Pyramid and Runner's stretch for 2 minutes on each leg", false));
         yogaTaskList.add(new Task(3, "Pigeon pose, 5 minutes on each leg", false));
@@ -48,7 +75,7 @@ public class Categories implements Serializable{
         yogaTaskList.add(new Task(9, "Practice balance poses for 15 minutes", false));
         yogaTaskList.add(new Task(10, "Sun Salutation with Cresent, 18 minutes", false));
 
-        ArrayList<Task>  mayPhotoTaskList = new ArrayList<Task>();
+        ArrayList<Task> mayPhotoTaskList = new ArrayList<Task>();
         mayPhotoTaskList.add(new Task(1, "Something in bloom", false));
         mayPhotoTaskList.add(new Task(2, "Something interesting you walk by every day", false));
         mayPhotoTaskList.add(new Task(3, "Treat yourself and take a photo", false));
@@ -56,9 +83,8 @@ public class Categories implements Serializable{
         mayPhotoTaskList.add(new Task(5, "Do something creative today and don't forget to take a picture", false));
 
 
-
         ArrayList<Challenge> exerciseChallenges = new ArrayList<Challenge>();
-        exerciseChallenges.add(new Challenge("Yoga Flex", "This is the first challenge", yogaTaskList));
+        exerciseChallenges.add(new Challenge("Yoga Flex Super", "This is the first challenge", yogaTaskList));
         exerciseChallenges.add(new Challenge("AB-solutely Fabulous", "This is the second challenge", yogaTaskList));
         exerciseChallenges.add(new Challenge("Push up Challenge", "This is the third challenge", yogaTaskList));
         exerciseChallenges.add(new Challenge("0 to 5K", "This is the fourth challenge", yogaTaskList));
@@ -78,7 +104,9 @@ public class Categories implements Serializable{
         newCategories.add(c1);
         newCategories.add(c2);
 
-         return newCategories;
+        return newCategories;
 
     }
+
+
 }

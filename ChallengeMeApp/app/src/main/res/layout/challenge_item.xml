@@ -81,8 +81,6 @@
         android:id="@+id/fromMyChallengesB"
         android:layout_width="87dp"
         android:layout_height="31dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginRight="4dp"
         android:layout_marginTop="4dp"
         android:background="@android:color/holo_orange_dark"
         android:fontFamily="@font/vampiro_one"

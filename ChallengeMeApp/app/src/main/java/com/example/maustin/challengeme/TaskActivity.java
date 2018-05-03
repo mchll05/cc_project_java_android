@@ -18,7 +18,6 @@ public class TaskActivity extends AppCompatActivity {
 
     Challenge challenge;
     Button completeButton;
-//    Categories categories;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,16 +37,18 @@ public class TaskActivity extends AppCompatActivity {
     }
 
     public void onCompletedButtonClick(View button) {
-//        Challenge challenge = (Challenge) button.getTag();
-//        Toast.makeText(this, challenge.getName() + " Completed", Toast.LENGTH_SHORT).show();
-//
-//        if (SharedPreferencesHelper.loadApplicationState(this).getCategories() != null) {
-//                categories = SharedPreferencesHelper.loadApplicationState(this).getCategories();
-//                } else {
-//                categories = new Categories();
-//                }
-//        categories.getMyChallengesFromAllCategories().add(challenge);
-//        SharedPreferencesHelper.saveApplicationState(this, new ApplicationState(categories));
+
+        Categories categories;
+        if (SharedPreferencesHelper.loadApplicationState(this).getCategories() != null) {
+            categories = SharedPreferencesHelper.loadApplicationState(this).getCategories();
+        } else {
+            categories = new Categories();
+        }
+
+        //make current challange completed
+        categories.setChallengeAsCompleted(challenge);
+
+        SharedPreferencesHelper.saveApplicationState(this, new ApplicationState(categories));
 
         Intent intent = new Intent(this, MyChallengesActivity.class);
 //        intent.putExtra("challenge", challenge);

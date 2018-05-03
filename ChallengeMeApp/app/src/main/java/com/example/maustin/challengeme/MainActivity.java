@@ -15,6 +15,8 @@ import android.widget.Toast;
 
 import com.example.maustin.challengeme.categoriesandchallenges.Categories;
 import com.example.maustin.challengeme.categoriesandchallenges.Challenge;
+import com.example.maustin.challengeme.sharedpref.ApplicationState;
+import com.example.maustin.challengeme.sharedpref.SharedPreferencesHelper;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -31,7 +33,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        categories = new Categories();
+        if (SharedPreferencesHelper.loadApplicationState(this).getCategories() != null) {
+            categories = SharedPreferencesHelper.loadApplicationState(this).getCategories();
+        } else {
+            categories = new Categories();
+            SharedPreferencesHelper.saveApplicationState(this, new ApplicationState(categories));
+        }
+
         exerciseButton = findViewById(R.id.firstImageBId);
         photographyButton = findViewById(R.id.secondImageBId);
         myButton = findViewById(R.id.myChallengesB);
