@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
     //+++++++++++++++++++++++++++++++++Menu++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.menu_main, menu);
@@ -78,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.user_profile) {
+        if (item.getItemId() == R.id.home) {
             Toast.makeText(MainActivity.this, R.string.menu_toast_hello,
                     Toast.LENGTH_SHORT).show();
             return true;

@@ -122,13 +122,13 @@
         android:fontFamily="@font/advent_pro_semibold"
         android:onClick="onMyChallengesButtonClick"
         android:text="My Challenges"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.154"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.982" />
+        app:layout_constraintVertical_bias="0.884" />
 
     <Button
         android:id="@+id/button2"
@@ -141,12 +141,12 @@
         android:background="@drawable/backgroundtwo"
         android:fontFamily="@font/advent_pro_semibold"
         android:text="Achievements"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.874"
+        app:layout_constraintHorizontal_bias="0.831"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.982" />
+        app:layout_constraintVertical_bias="0.884" />
 
 </android.support.constraint.ConstraintLayout>

@@ -6,12 +6,10 @@ public class Task implements Serializable {
 
     private Integer number;
     private String taskDescription;
-    private boolean taskStatus; // true means completed
 
-    public Task(Integer number, String taskDescription, boolean taskStatus) {
+    public Task(Integer number, String taskDescription) {
         this.number = number;
         this.taskDescription = taskDescription;
-        this.taskStatus = taskStatus;
 
     }
 
@@ -22,13 +20,4 @@ public class Task implements Serializable {
     public String getTask() {
         return taskDescription;
     }
-
-    public boolean getInitialTaskStatus() {
-        return false;
-    }
-
-    public boolean taskComplete(){
-        return taskStatus;
-    }
-
 }

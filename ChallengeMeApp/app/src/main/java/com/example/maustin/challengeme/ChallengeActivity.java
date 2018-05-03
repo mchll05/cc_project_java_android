@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
@@ -38,7 +41,6 @@ public class ChallengeActivity extends AppCompatActivity {
         addToMyChallengeButton = findViewById(R.id.toMyChallengesB);
         removeFromToMyChallengeButton = findViewById(R.id.fromMyChallengesB);
 
-
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
         category = (Category) extras.getSerializable("category");
@@ -59,7 +61,6 @@ public class ChallengeActivity extends AppCompatActivity {
 
     public void onAddToMyChallengesButtonClicked(View button) {
         Challenge tappedChallenge = (Challenge) button.getTag();
-        //update button - optional
         Toast.makeText(this, "Added " + tappedChallenge.getName(), Toast.LENGTH_SHORT).show();
         // load the state
         if (SharedPreferencesHelper.loadApplicationState(this).getCategories() != null) {
@@ -68,7 +69,7 @@ public class ChallengeActivity extends AppCompatActivity {
             categories = new Categories();
         }
         // make change:
-        categories.getMyChallengesFromAllCategories().add(tappedChallenge);
+        categories.getActiveFromAllCategories().add(tappedChallenge);
 //         save state:
         SharedPreferencesHelper.saveApplicationState(this, new ApplicationState(categories));
     }
@@ -81,8 +82,28 @@ public class ChallengeActivity extends AppCompatActivity {
         } else {
             categories = new Categories();
         }
-        categories.getMyChallengesFromAllCategories().remove(tappedChallenge);
+        categories.getActiveFromAllCategories().remove(tappedChallenge);
         SharedPreferencesHelper.saveApplicationState(this, new ApplicationState(categories));
+    }
+//=================================Menu=============================================
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.menu_challenge, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.go_home) {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+
     }
 }
 

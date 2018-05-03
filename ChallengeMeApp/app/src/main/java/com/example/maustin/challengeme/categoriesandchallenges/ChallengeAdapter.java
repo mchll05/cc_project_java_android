@@ -43,9 +43,6 @@ public class ChallengeAdapter extends ArrayAdapter {
         Button removeFromToMyChallengeButton = (Button) cardItemView.findViewById(R.id.fromMyChallengesB);
         removeFromToMyChallengeButton.setTag(currentChallenge);
 
-//        Button addToCompleteChallengesButton = (Button) cardItemView.findViewById(R.id.completeB);
-//        addToCompleteChallengesButton.setTag(currentChallenge);
-
         return cardItemView;
     }
 }
