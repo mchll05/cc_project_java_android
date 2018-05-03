@@ -6,22 +6,19 @@
     android:id="@+id/challengeItem"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/sunset"
     tools:context=".ChallengeActivity"
     tools:layout_constraintHorizontal_chainStyle="spread">
 
     <android.support.v7.widget.CardView
         android:id="@+id/cardViewId"
-        android:layout_width="280dp"
+        android:layout_width="0dp"
         android:layout_height="141dp"
         android:layout_gravity="center"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="50dp"
-        app:cardBackgroundColor="@color/colorAccent"
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="@color/colorPrimaryDark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,8 +28,8 @@
 
         <TextView
             android:id="@+id/nameID"
-            android:layout_width="186dp"
-            android:layout_height="70dp"
+            android:layout_width="match_parent"
+            android:layout_height="78dp"
             android:fontFamily="cursive"
             android:gravity="center"
             android:textSize="30sp"
@@ -43,11 +40,9 @@
 
     <Button
         android:id="@+id/challengeBId"
-        android:layout_width="281dp"
+        android:layout_width="0dp"
         android:layout_height="41dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/sunblend"
         android:onClick="onChallengeButtonClicked"

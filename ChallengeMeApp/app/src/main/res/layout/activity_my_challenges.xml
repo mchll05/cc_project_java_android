@@ -35,6 +35,8 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/advent_pro_semibold"
         android:onClick="onCreateNewChallengeButtonClick"
         android:text="Create a new Challenge"
         app:layout_constraintBottom_toBottomOf="parent"

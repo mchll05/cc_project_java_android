@@ -78,13 +78,25 @@ public class Categories implements Serializable {
         yogaTaskList.add(new Task(1, "Sun Salutation flow for 10 minutes"));
         yogaTaskList.add(new Task(2, "Hold Pyramid and Runner's stretch for 2 minutes on each leg"));
         yogaTaskList.add(new Task(3, "Pigeon pose, 5 minutes on each leg"));
-        yogaTaskList.add(new Task(4, "Sun Salutation, introduce Cresent pose, 12 minutes"));
+        yogaTaskList.add(new Task(4, "Sun Salutation, introduce Crescent pose, 12 minutes"));
         yogaTaskList.add(new Task(5, "Repeat day 2 with a Prayer Squat"));
         yogaTaskList.add(new Task(6, "Pigeon pose, 10 minutes on each leg"));
-        yogaTaskList.add(new Task(7, "Sun Salutation with Cresent, 15 minutes"));
+        yogaTaskList.add(new Task(7, "Sun Salutation with Crescent, 15 minutes"));
         yogaTaskList.add(new Task(8, "Hold Pyramid/Runner/Prayer with Bridge"));
         yogaTaskList.add(new Task(9, "Practice balance poses for 15 minutes"));
-        yogaTaskList.add(new Task(10, "Sun Salutation with Cresent, 18 minutes"));
+        yogaTaskList.add(new Task(10, "Sun Salutation with Crescent, 18 minutes"));
+
+        ArrayList<Task> absTaskList = new ArrayList<Task>();
+        absTaskList.add(new Task(1, "10 Crunches, 16 Bicycle Crunches, 5 Leg raises, 10 seconds Plank"));
+        absTaskList.add(new Task(2, "12 Crunches, 20 Bicycle Crunches, 8 Leg raises, 15 seconds Plank"));
+        absTaskList.add(new Task(3, "16 Crunches, 26 Bicycle Crunches, 10 Leg raises, 20 seconds Plank"));
+        absTaskList.add(new Task(4, "20 Crunches, 32 Bicycle Crunches, 12 Leg raises, 25 seconds Plank"));
+        absTaskList.add(new Task(5, "24 Crunches, 36 Bicycle Crunches, 14 Leg raises, 30 seconds Plank"));
+        absTaskList.add(new Task(6, "28 Crunches, 42 Bicycle Crunches, 16 Leg raises, 35 seconds Plank"));
+        absTaskList.add(new Task(7, "32 Crunches, 50 Bicycle Crunches, 18 Leg raises, 40 seconds Plank"));
+        absTaskList.add(new Task(8, "35 Crunches, 56 Bicycle Crunches, 20 Leg raises, 45 seconds Plank"));
+        absTaskList.add(new Task(9, "40 Crunches, 60 Bicycle Crunches, 22 Leg raises, 50 seconds Plank"));
+        absTaskList.add(new Task(10, "50 Crunches, 70 Bicycle Crunches, 24 Leg raises, 60 seconds Plank"));
 
         ArrayList<Task> mayPhotoTaskList = new ArrayList<Task>();
         mayPhotoTaskList.add(new Task(1, "Something in bloom"));
@@ -95,11 +107,11 @@ public class Categories implements Serializable {
 
 
         ArrayList<Challenge> exerciseChallenges = new ArrayList<Challenge>();
-        exerciseChallenges.add(new Challenge("Yoga Flex Super", "This is the first challenge", yogaTaskList));
-        exerciseChallenges.add(new Challenge("AB-solutely Fabulous", "This is the second challenge", yogaTaskList));
-        exerciseChallenges.add(new Challenge("Push up Challenge", "This is the third challenge", yogaTaskList));
-        exerciseChallenges.add(new Challenge("0 to 5K", "This is the fourth challenge", yogaTaskList));
-        exerciseChallenges.add(new Challenge("Vogue Challenge", "This is the fifth challenge", yogaTaskList));
+        exerciseChallenges.add(new Challenge("Yoga Flex Super", "Stretch your way to flexibility", yogaTaskList));
+        exerciseChallenges.add(new Challenge("AB-solutely Fabulous", "Intenser by the day", absTaskList));
+        exerciseChallenges.add(new Challenge("Push up Challenge", "Welcome to the Gun Show", yogaTaskList));
+        exerciseChallenges.add(new Challenge("0 to 5K", "In just 8 weeks!", yogaTaskList));
+        exerciseChallenges.add(new Challenge("Vogue Challenge", "Sissy that walk", yogaTaskList));
 
         ArrayList<Challenge> photographyChallenges = new ArrayList<Challenge>();
         photographyChallenges.add(new Challenge("May Photo Challenge", "Take photos in May", mayPhotoTaskList));
